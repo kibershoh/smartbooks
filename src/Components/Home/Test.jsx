@@ -1,10 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-
-import BookCards from './Test';
-
-const Home = () => {
-  const [likes, setLikes] = useState(true);
+import React, { useEffect, useRef, useState } from 'react';
+import booksData from '../../Constants/booksItems.json';
+import { Link } from 'react-router-dom';
+import clsx from 'clsx';
+import { RiSendPlaneFill } from 'react-icons/ri';
+import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
+import { TbMessage } from 'react-icons/tb';
+import save from '../../assets/saveIcon.png'
+import saveFill from '../../assets/fillSaveIcon.png'
+const BookCards = () => {
+     const [likes, setLikes] = useState(true);
   const [likeCount, setLikeCount] = useState(0);
+  const link = 'https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FWebley-and-The-World-Machine.pdf?alt=media&token=447359a7-3242-405f-95f2-3c70cacf735d'
   const Likes = () => {
     setLikes(!likes);
     setLikeCount(likeCount + 0.5);
@@ -38,12 +44,18 @@ const Home = () => {
     };
   });
   return (
-    <div className="px-10 max-md:px-2 pt-20">
-      {/* <h1 className="font-bold text-lg mb-10">Home</h1>
-      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-2">
-        <div className="shadow-2xl rounded-lg p-2">
+    <div>
+      {Object.keys(booksData.Books).map((genre) => (
+        <div key={genre}>
+          <h2 className='font-bold text-3xl my-10 mt-20'>{genre}</h2>
+          <div className='grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-2'>
+            {Object.keys(booksData.Books[genre]).map((bookKey) => {
+              const book = booksData.Books[genre][bookKey];
+              return (
+                <div key={bookKey}>
+                     <div className="shadow-2xl rounded-lg p-2">
           <div className='flex max-lg:flex-cols'>
-            <img src={book1} alt="" className='w-64 h-48 max-md:w-32 max-md:h-32 rounded-lg' />
+            <img src={book.imgUrl} alt="" className='w-64 h-48 max-md:w-32 max-md:h-32 rounded-lg' />
             <div className='p-5 max-md:pl-2 max-md:pr-0 pt-0'>
               <h1 className='text-lg text-start  font-bold max-md:text-xs'>Webley-and-The-World-Machine</h1>
               <p className='text-slate-400 text-start w-full text-sm '>Zachary Paul Chopchinski</p>
@@ -101,18 +113,26 @@ const Home = () => {
                 />
               </div>    
             <button className='bg-blue-600 h-10 text-white rounded-lg w-1/3 text-lg'>
-              <Link to={link} target="_blank">
+              <Link to={book.fileUrl} target="_blank">
                 Open
               </Link>
             </button>
           </div>
         </div>
-
-
-      </div> */}
-      <BookCards/>
+                  {/* <img src={book.imgUrl} alt={book.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                  <h3>{book.name}</h3>
+                  <p>Author: {book.authorName}</p>
+                  <p>{book.about}</p>
+                  <p>Genre: {book.genre}</p>
+                  <a href={book.fileUrl} target="_blank" rel="noopener noreferrer">Read</a> */}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default BookCards;

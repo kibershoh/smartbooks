@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home'
-import CreatePost from './Components/CreatePost'
+// import CreatePost from './Components/CreatePost'
+import Navbar from './Components/Navbar'
 const App = () => {
 
   return (
     <Router>
-     
-      <Home/>
+     <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/createpost' element={<CreatePost/>}/>
+        <Route path='/about' element={<Home/>}/>
+        <Route path='/contact' element={<Home/>}/>
 
       </Routes>
     </Router>

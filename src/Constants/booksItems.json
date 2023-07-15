@@ -1,0 +1,154 @@
+    {
+    "Books": {
+        "Fantasy": {
+        "Fly-Away-Home": {
+            "about": "A person shouldn’t feel such anxiety when visiting her childhood home. I suppose I’m not like most thirty-eight-year-old women. I am alone. Raised by a single mother and born out of wedlock, I know nothing about my father. Fierce resistance met any inquiry into his whereabouts.",
+            "authorName": "Eve Bunting",
+            "comment": {
+            "account": "coment"
+            },
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FFly-Away-Home.pdf?alt=media&token=968f3cf6-09ee-4c2e-967c-3c1051e35840",
+            "genre": "Fantasy",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2Ffly_away_home.jpg?alt=media&token=00af499a-76bb-4fa9-83d3-9b7b8f726ff7",
+            "like": {
+            "account": true
+            },
+            "name": "Fly-Away-Home"
+        },
+        "The-Size-of-Your-Dreams": {
+            "about": "Have you ever noticed how anal copyrights can be? They’re all like: don’t do this, don’t do that. Don’t copy our book, don’t quote our book, don’t take it into the bathroom",
+            "authorName": "Dave Mason and Chana Maso",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FThe-Size-of-Your-Dreams.pdf?alt=media&token=a2114304-e1d3-412e-bb0d-64981d0d0bd0",
+            "genre": "Fantasy",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2Fthe%20size%20of%20your%20dreams.jpg?alt=media&token=419fabd0-a95c-40ed-a3bd-beb4d3498c9b",
+            "name": "The-Size-of-Your-Dreams"
+        },
+        "The-Time-Machine": {
+            "about": "This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.net",
+            "authorName": "Herbert George Wells",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FThe-Time-Machine.pdf?alt=media&token=901a72c0-fdae-4118-a263-6cff9fe2ea0a",
+            "genre": "Fantasy",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2Fthe_time_machine.jpg?alt=media&token=b296fcf8-2c91-4a51-8ed7-16e502c0f19f",
+            "name": "The-Time-Machine"
+        },
+        "Webley-and-The-World-Machine": {
+            "about": "There are so many things that I owe to so many people for all the help that they generously gave to help me make this book all that it became. To my lovely wife, never forget that I see you, and always know all that you do for me.",
+            "authorName": "Zachary Paul Chopchinski",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FWebley-and-The-World-Machine.pdf?alt=media&token=447359a7-3242-405f-95f2-3c70cacf735d",
+            "genre": "Fantasy",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2Fwebley_and_the_world_machine.jpg?alt=media&token=57e6edc2-bd6d-4a4c-b889-da0290351078",
+            "name": "Webley-and-The-World-Machine"
+        },
+        "Wizard's-Rise": {
+            "about": "This book is a work of fiction. Names, characters, places, and incidents are the product of the author’s imagination or are used fictitiously. Any resemblance to actual events, locales, or persons, living or dead, is purely coincidental.",
+            "authorName": "Phillip Tomasson",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FWizard's-Rise.pdf?alt=media&token=e8e76791-624f-47d1-ba46-c71861682c60",
+            "genre": "Fantasy",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2Fwizard's_rise.jpg?alt=media&token=e07cb109-0058-43ce-8c21-a09c97d37086",
+            "name": "Wizard's-Rise"
+        }
+        },
+        "Literature": {
+        "1984": {
+            "about": "It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.",
+            "authorName": "George Orwell",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2FLiterature%2F1984.pdf?alt=media&token=47d24fa4-b3f9-4f1f-a392-1c29d3a69a63",
+            "genre": "Literature",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2FLiterature%2F1984.jpg?alt=media&token=cc5b4b87-36c4-458f-aecb-2513e4dbb882",
+            "name": "1984"
+        },
+        "The great gatsby": {
+            "about": "Then wear the gold hat, if that will move her; If you can bounce high, bounce for her too, Till she cry ‘Lover, gold-hatted, high-bouncing lover, I must have you!",
+            "authorName": "F.Scott Fitzgerald",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2FLiterature%2Fthe-great-gatsby.pdf?alt=media&token=e3b54a5b-685b-45bf-8703-7dcfaef315c4",
+            "genre": "Literature",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2FLiterature%2FThe_Great_Gatsby.jpg?alt=media&token=d6c790d7-cc93-40dd-a886-6236ba7ec390",
+            "name": "The great gatsby"
+        }
+        },
+        "Psychology": {
+        "Dream-Psychology": {
+            "about": "This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.net",
+            "authorName": "Freud Sigmund",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2FDream-Psychology.pdf?alt=media&token=0a4aca0c-a18f-48cc-a24a-f51abd26af00",
+            "genre": "Psychology",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2Fdream-psychology.jpg?alt=media&token=a619221a-26c9-4aca-ad1f-1120deccb2b3",
+            "name": "Dream-Psychology"
+        },
+        "Relativity---The-Special-and-General-Theory": {
+            "about": "Copyright laws are changing all over the world. Be sure to check the copyright laws for your country before downloading or redistributing this or any other Project Gutenberg eBook",
+            "authorName": "Albert Einstein",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2FRelativity---The-Special-and-General-Theory.pdf?alt=media&token=e82d9370-c261-4ea2-aa6b-21670a4e1905",
+            "genre": "Psychology",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2Frelativity_the_special_and_general_theory.jpg?alt=media&token=059a28e6-9555-4115-b9b1-7599508d191c",
+            "name": "Relativity---The-Special-and-General-Theory"
+        },
+        "The-Book-of-Courage": {
+            "about": "This eBook is for the use of anyone anywhere at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.org",
+            "authorName": "John Faris",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2FThe-Book-of-Courage.pdf?alt=media&token=ad3e91ca-e910-4879-b0b7-7a912c7a2101",
+            "genre": "Psychology",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2Fthe_book_of_courage.jpg?alt=media&token=c9ce2cff-6e0a-4640-81e1-acf4410dca2f",
+            "name": "The-Book-of-Courage"
+        },
+        "The-Foundations-of-Personality": {
+            "about": "Please take a look at the important information in this header. We encourage you to keep this file on your own disk, keeping an electronic path open for the next readers. Do not remove this.",
+            "authorName": "Abraham Myerson",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2FThe-Foundations-of-Personality.pdf?alt=media&token=5e7ad4a0-7793-4885-8b0f-b2437a3ca6a4",
+            "genre": "Psychology",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2Fthe_foundation_of_personality.jpg?alt=media&token=21f06d71-3a45-43bb-a89f-6312b1a6bfe7",
+            "name": "The-Foundations-of-Personality"
+        },
+        "The-Psychology-of-Beauty": {
+            "about": "This should be the first thing seen when anyone opens the book. Do not change or edit it without written permission. The words are carefully chosen to provide users with the information they need about what they can legally do with the texts.",
+            "authorName": "Ethel Puffer Howes",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2FThe-Psychology-of-Beauty.pdf?alt=media&token=60025662-7899-4484-aef9-54fc28db078d",
+            "genre": "Psychology",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fpsychology%2Fthe_psychology_of_beauty.jpg?alt=media&token=2ca82482-5108-4ec0-ba97-a0b99410d944",
+            "name": "The-Psychology-of-Beauty"
+        }
+        },
+        "Thriller": {
+        "Caught-In-The-Net": {
+            "about": "The cold on the 8th of February, 186-, was more intense than the Parisians had experienced during the whole of the severe winter which had preceded it, for at twelve o’clock on that day Chevalier’s thermometer, so well known by the denizens of Paris, registered three degrees below zero.",
+            "authorName": "Emile Gaboriau",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2FCaught-In-The-Net.pdf?alt=media&token=21b68f20-bd5b-4670-bd0c-8a755c048521",
+            "genre": "Thriller",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2Fcaught_in_the_net.jpg?alt=media&token=9bc70aba-e05f-49f4-8290-5404c1c01ef3",
+            "name": "Caught-In-The-Net"
+        },
+        "Let-Me-In": {
+            "about": "All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other non-commercial uses permitted by copyright law",
+            "authorName": "Adam Nicholls",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2FLet-Me-In.pdf?alt=media&token=771c36c5-0235-4e68-b037-aa5381ea5e80",
+            "genre": "Thriller",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2Flet_me_in.jpg?alt=media&token=3c107708-1dd4-4bb0-abf2-8ec08496bcc0",
+            "name": "Let-Me-In"
+        },
+        "Missing": {
+            "about": "All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other non-commercial uses permitted by copyright law",
+            "authorName": "Adam Nicolls",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2FMissing.pdf?alt=media&token=6a959712-2c60-44a3-9396-636a73528366",
+            "genre": "Thriller",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2FMissing.jpeg?alt=media&token=1b2d9b14-5fff-452b-ab75-0fc5a02bf54c",
+            "name": "Missing"
+        },
+        "The-Adventure-of-the-Red-Circle": {
+            "about": "Well, Mrs. Warren, I cannot see that you have any particular cause for uneasiness, nor do I understand why I, whose time is of some value, should interfere in the matter. I really have other things to engage me.",
+            "authorName": "Arthur Conan Doyle",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2FThe-Adventure-of-the-Red-Circle.pdf?alt=media&token=081b707a-bbcc-4cb8-b437-4dc0e4cc5dff",
+            "genre": "Thriller",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2Fthe_adventure_of_the_red_circle.jpg?alt=media&token=47390d1e-3409-43b5-bc35-7c9fb3a6c658",
+            "name": "The-Adventure-of-the-Red-Circle"
+        },
+        "The-Apartment-Next-Door": {
+            "about": "It was three o'clock in the morning. Along a deserted pavement of Riverside Drive strode briskly a young man whose square-set shoulders and erect poise suggested a military training",
+            "authorName": "William Johnston",
+            "fileUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2FThe-Apartment-Next-Door.pdf?alt=media&token=400ec19b-0549-4a92-ad1a-8294800c26df",
+            "genre": "Thriller",
+            "imgUrl": "https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Fthriller%2Fthe%20apartment%20next%20door.jpg?alt=media&token=65bcd166-c1ec-448f-9dba-4a340680758c",
+            "name": "The-Apartment-Next-Door"
+        }
+        }
+    }
+    }
