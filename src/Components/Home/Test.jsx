@@ -7,6 +7,8 @@ import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { TbMessage } from 'react-icons/tb';
 import save from '../../assets/saveIcon.png'
 import saveFill from '../../assets/fillSaveIcon.png'
+import { onValue, ref } from '@firebase/database';
+import { db } from '../../firebase';
 const BookCards = () => {
      const [likes, setLikes] = useState(true);
   const [likeCount, setLikeCount] = useState(0);
@@ -43,22 +45,35 @@ const BookCards = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
+  const [todoData,setTodoData] = useState([])
+    useEffect(()=>{
+        const starCountRef = ref(db,'BooksData')
+        onValue(starCountRef, (snapshot)=>{
+            const data = snapshot.val();
+            const newPosts = Object.keys(data).map(key=>({
+                id:key,
+                ...data[key]
+            }))
+            console.log(newPosts);
+            setTodoData(newPosts)
+        })
+    }, [])
   return (
     <div>
-      {Object.keys(booksData.Books).map((genre) => (
-        <div key={genre}>
+      {Object.keys(todoData).map((genre,index) => (
+        <div key={index}>
           <h2 className='font-bold text-3xl my-10 mt-20'>{genre}</h2>
           <div className='grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-2'>
-            {Object.keys(booksData.Books[genre]).map((bookKey) => {
-              const book = booksData.Books[genre][bookKey];
+            {Object.keys(todoData[genre]).map((bookKey) => {
+              const book = todoData[genre][bookKey];
               return (
                 <div key={bookKey}>
                      <div className="shadow-2xl rounded-lg p-2">
           <div className='flex max-lg:flex-cols'>
             <img src={book.imgUrl} alt="" className='w-64 h-48 max-md:w-32 max-md:h-32 rounded-lg' />
             <div className='p-5 max-md:pl-2 max-md:pr-0 pt-0'>
-              <h1 className='text-lg text-start  font-bold max-md:text-xs'>Webley-and-The-World-Machine</h1>
-              <p className='text-slate-400 text-start w-full text-sm '>Zachary Paul Chopchinski</p>
+              <h1 className='text-lg text-start  font-bold max-md:text-xs'>{book.bookName}</h1>
+              <p className='text-slate-400 text-start w-full text-sm '>{book.authorName}</p>
               <p className='break-all pt-1 pr-2 mt-3 overflow-y-scroll h-16 max-md:h-14'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum ratione mollitia neque id nam soluta ex! Autem, inventore nihil.
               </p>
@@ -119,12 +134,7 @@ const BookCards = () => {
             </button>
           </div>
         </div>
-                  {/* <img src={book.imgUrl} alt={book.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-                  <h3>{book.name}</h3>
-                  <p>Author: {book.authorName}</p>
-                  <p>{book.about}</p>
-                  <p>Genre: {book.genre}</p>
-                  <a href={book.fileUrl} target="_blank" rel="noopener noreferrer">Read</a> */}
+                 
                 </div>
               );
             })}

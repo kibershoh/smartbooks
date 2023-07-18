@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import BookCards from './Test';
+import Test2 from '../Login';
 
 const Home = () => {
   const [likes, setLikes] = useState(true);
@@ -39,6 +40,7 @@ const Home = () => {
   });
   return (
     <div className="px-10 max-md:px-2 pt-20">
+      <Test2/>
       {/* <h1 className="font-bold text-lg mb-10">Home</h1>
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-2">
         <div className="shadow-2xl rounded-lg p-2">
