@@ -15,6 +15,12 @@ export const navLinks= [
     icon: RiMenu2Fill,
   },
   {
+    id: 2,
+    title: "Genres",
+    path: '/genres',
+    icon: RiMenu2Fill,
+  },
+  {
     id: 3,
     title: "Contact",
     path: '/contact',
