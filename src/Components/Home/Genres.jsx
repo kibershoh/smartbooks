@@ -154,19 +154,9 @@ const [value, setValue] = React.useState();
       </TabContext>
     </Box>
 }
-jhxvbdsvbj
-<Proba/>
     </div>
   )
 }
 
 export default Genres
-
-//  {
-//               book.comment.map((item,inx)=>(
-//                 <div key={inx} className='border m-1 p-2'>
-//                   <h1 className='text-sm font-semibold text-slite'>{item.user}</h1>
-//                   <h1 className='text-xl'>{item.comment}</h1>
-//                 </div>
-//               ))
-//             }   
+ 

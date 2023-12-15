@@ -42,26 +42,26 @@ const Footer = () => {
       </ul>
 
       <div>
-        <Link to={'/'} className='flex my-4'>
+        <Link className='flex my-4'>
           <IoCall size={25} className='hover:scale-110 hover:text-green-600 text-blue-900 hover:duration-300' />
 
           <p className='pl-3 font-semibold'> +998940095101
           </p>
         </Link>
-        <Link to={'/'} className='flex my-4'>
+        <Link className='flex my-4'>
           <BiMessageDetail size={25} className='hover:scale-110 hover:text-blue-400 text-blue-900 hover:duration-300'/>
 
           <p className='pl-3 font-semibold'> saminovo150947@gmail.com
           </p>
         </Link>
-        <Link to={'/'} className='flex my-4'>
+        <Link className='flex my-4'>
         
         </Link>
         <div className='flex my-8'>
-          <Link to={'/'} className='mr-8 '>
+          <Link src={'/'} className='mr-8 '>
             <GrInstagram  size={25} className='hover:scale-110 hover:text-red-700 text-blue-900 hover:duration-300'/>
           </Link>
-          <Link to={'/'} className='mr-8 '>
+          <Link to={''} className='mr-8 '>
             <BsTelegram size={25} className='hover:scale-110 hover:text-blue-400 text-blue-900 hover:duration-300'/>
           </Link>
           <Link to={'/'} className='mr-8 '>
