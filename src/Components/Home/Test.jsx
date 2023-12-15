@@ -7,10 +7,12 @@ import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import { TbMessage } from 'react-icons/tb';
 import save from '../../assets/saveIcon.png'
 import saveFill from '../../assets/fillSaveIcon.png'
+import { onValue, ref } from '@firebase/database';
+import { db } from '../../firebase';
 const BookCards = () => {
-     const [likes, setLikes] = useState(true);
+   const [likes, setLikes] = useState(false);
   const [likeCount, setLikeCount] = useState(0);
-  const link = 'https://firebasestorage.googleapis.com/v0/b/bookapp-faa2c.appspot.com/o/books%2Ffantasy%2FWebley-and-The-World-Machine.pdf?alt=media&token=447359a7-3242-405f-95f2-3c70cacf735d'
+ 
   const Likes = () => {
     setLikes(!likes);
     setLikeCount(likeCount + 0.5);
@@ -19,8 +21,8 @@ const BookCards = () => {
   const [profile, setProfile] = useState(false);
 
   const [input, setInput] = useState(false);
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  // const [active, setActive] = useState("");
+  // const [toggle, setToggle] = useState(false);
   const activeInput = () => {
     setInput(!input);
   };
@@ -43,36 +45,56 @@ const BookCards = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
+   const [todoData,setTodoData] = useState([])
+    useEffect(()=>{
+        const starCountRef = ref(db,'BooksData')
+        onValue(starCountRef, (snapshot)=>{
+            const data = snapshot.val();
+            const newPosts = data
+            console.log(newPosts);
+            setTodoData(newPosts)
+        })
+    }, [])
+   
+
   return (
     <div>
-      {Object.keys(booksData.Books).map((genre) => (
-        <div key={genre}>
-          <h2 className='font-bold text-3xl my-10 mt-20'>{genre}</h2>
-          <div className='grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-2'>
-            {Object.keys(booksData.Books[genre]).map((bookKey) => {
-              const book = booksData.Books[genre][bookKey];
+     
+
+
+
+<div className='flex'>
+  <h1 className='text-3xl mr-20 font-bold'>All Books</h1>
+</div>
+      {Object.keys(todoData).map((genre,index) => (
+        <div key={index}>
+          {/* <h2 className='font-bold text-3xl my-10 mt-20'>{genre}</h2> */}
+          <div  className='grid grid-cols-2 max-md:grid-cols-1 gap-5 max-md:gap-2'>
+            {
+            Object.keys(todoData[genre]).map((bookKey,indexx) => {
+              const book = todoData[genre][bookKey];
               return (
-                <div key={bookKey}>
-                     <div className="shadow-2xl rounded-lg p-2">
+                <div key={indexx}>
+                     <div key={indexx} className="shadow-2xl rounded-lg p-2">
           <div className='flex max-lg:flex-cols'>
-            <img src={book.imgUrl} alt="" className='w-64 h-48 max-md:w-32 max-md:h-32 rounded-lg' />
+            <img src={book.imgUrl} className='w-64 h-48 max-md:w-32 max-md:h-32 rounded-lg' />
             <div className='p-5 max-md:pl-2 max-md:pr-0 pt-0'>
-              <h1 className='text-lg text-start  font-bold max-md:text-xs'>Webley-and-The-World-Machine</h1>
-              <p className='text-slate-400 text-start w-full text-sm '>Zachary Paul Chopchinski</p>
+              <h1 className='text-lg text-start  font-bold max-md:text-xs'>{book.bookName}</h1>
+              <p className='text-slate-400 text-start w-full text-sm '>{book.authorName}</p>
               <p className='break-all pt-1 pr-2 mt-3 overflow-y-scroll h-16 max-md:h-14'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum ratione mollitia neque id nam soluta ex! Autem, inventore nihil.
               </p>
             </div>
             <div className='flex flex-col h-44 justify-between '>
               <div>
-                <button className="hover:scale-115" onClick={Likes}>
+                {/* <button className="hover:scale-115" onClick={Likes}>
                   {likes ? (
                     <img src={save} className="hover:scale-110 w-6 h-5 duration-300" />
                   ) : (
                     <img src={saveFill} className="hover:scale-110 w-8 h-5 duration-300" />
 
                   )}
-                </button>
+                </button> */}
               </div>
 
               <div className='mt-20'>
@@ -119,19 +141,39 @@ const BookCards = () => {
             </button>
           </div>
         </div>
-                  {/* <img src={book.imgUrl} alt={book.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-                  <h3>{book.name}</h3>
-                  <p>Author: {book.authorName}</p>
-                  <p>{book.about}</p>
-                  <p>Genre: {book.genre}</p>
-                  <a href={book.fileUrl} target="_blank" rel="noopener noreferrer">Read</a> */}
+                 
                 </div>
               );
-            })}
+            })
+            
+            }
           </div>
         </div>
       ))}
     </div>
+    //  <div>
+    //   <h1>Books List</h1>
+    //   <div className="grid grid-cols-2 gap-10">
+    //     {Object.keys(todoData).map((genre) => (
+    //       <div key={genre} className=''>
+    //         {/* <h2>{genre}</h2> */}
+    //         <div className="genre-todoData">
+    //           {Object.keys(todoData[genre]).map((bookKey) => (
+    //             <div className="book" key={bookKey}>
+    //               <img src={todoData[genre][bookKey].imgUrl} width={200} alt={todoData[genre][bookKey].name} />
+    //               <h3>{todoData[genre][bookKey].name}</h3>
+    //               <p>{todoData[genre][bookKey].authorName}</p>
+    //               <p>{todoData[genre][bookKey].about}</p>
+    //               <a href={todoData[genre][bookKey].fileUrl} target="_blank" rel="noreferrer">
+    //                 Read Book
+    //               </a>
+    //             </div>
+    //           ))}
+    //         </div>
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
   );
 };
 
