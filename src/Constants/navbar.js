@@ -15,13 +15,13 @@ export const navLinks= [
     icon: RiMenu2Fill,
   },
   {
-    id: 2,
+    id: 3,
     title: "Genres",
     path: '/genres',
     icon: RiMenu2Fill,
   },
   {
-    id: 3,
+    id: 4,
     title: "Contact",
     path: '/contact',
     icon: AiOutlineFile,

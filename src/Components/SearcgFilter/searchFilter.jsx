@@ -19,7 +19,10 @@ const SearchFilter = () => {
     }
   return (
     <div className='pt-20'>
-        <input type="text" className='outline-nono border-2 border-blue-600 rounded-lg' placeholder='Search...' onChange={Filter} />
+<div className='w-full text-center'>
+        <input type="text" className='outline-none w-1/2  p-3 border-2 border-blue-600 rounded-lg' placeholder='Search...' onChange={Filter} />
+
+</div>
       <div className='shadow-lg border border-blue-600'>
     <table className='min-w-full text-left text-sm font-light'>
         <thead className='border-b font-medium dark:border-neutral-500'>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
  
@@ -9,9 +9,12 @@ import { BsTelegram } from 'react-icons/bs';
 import { BiMessageDetail } from 'react-icons/bi';
 import { IoCall } from 'react-icons/io5';
 import navLinks from '../../Constants/navbar';
+import { LanguageContext } from '../Context/LanguageContext';
 const Footer = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+      const { tr, language, setLanguage } = useContext(LanguageContext);
+
   return (
     <div className='mt-20 bg-white px-5'>
 
@@ -20,7 +23,7 @@ const Footer = () => {
         {/* <img src={logo} width={180} alt="" /> */}
       </div>
       <ul className="">
-        {navLinks.map((nav) => (
+        {tr('navLinks').map((nav) => (
           <li key={nav.id} className="text-base py-3 mx-5 links">
             <NavLink
               to={nav.path}

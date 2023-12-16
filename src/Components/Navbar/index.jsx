@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import logo from '../../assets/logo.png'
 import clsx from 'clsx';
 import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt1 } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
-import {IoCaretUpSharp} from "react-icons/io5";
+import { IoCaretUpSharp } from "react-icons/io5";
 import { ImSearch } from "react-icons/im";
-import { FaBell, FaUserAlt } from "react-icons/fa";
 import navLinks from '../../Constants/navbar';
+import { LanguageContext } from '../Context/LanguageContext';
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);
     const [profile, setProfile] = useState(false);
@@ -62,7 +62,12 @@ const Navbar = () => {
     const [input, setInput] = useState(false);
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
+    const { tr, language, setLanguage } = useContext(LanguageContext);
 
+    // Change languages
+    const handleLanguageChange = (e) => {
+        setLanguage(e.target.value);
+    };
     return (
         <div className="w-full fixed z-30" ref={sidebarRef}>
             <div
@@ -104,7 +109,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden lg:block flex items-center">
                     <ul className="flex">
-                        {navLinks.map((nav) => (
+                        {tr('navLinks').map((nav) => (
                             <li key={nav.id} className="text-base mx-5 links">
                                 <NavLink
                                     to={nav.path}
@@ -118,7 +123,7 @@ const Navbar = () => {
                                         setActive(nav.title);
                                         document.title = nav.title;
                                     }}
-                                    exact  activeClassName="text-red-600"
+                                    exact activeClassName="text-red-600"
                                 >
                                     {nav.title}
                                 </NavLink>
@@ -126,8 +131,32 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-
                 <div className="flex items-center">
+                    <div>
+                        <select className="outline-none p-1 font-semibold text-xs border-2 border-blue-600  rounded-lg  bg-transparent	" value={language} onChange={handleLanguageChange}>
+                            <option value="en" className="text-md bg-transparent  font-semibold mb-10 outline-none" style={{ height: '30px' }}>English</option>
+                            <option value="uz" className="text-md bg-transparent  font-semibold mb-10 outline-none">Uzbek</option>
+                        </select>
+                    </div>
+
+                    <div
+                        className={
+                            profile
+                                ? "absolute top-20 bg-white border shadow-lg w-auto p-3 right-3 max-md:w-1/2 max-lg:w-1/2 max-sm:w-11/12"
+                                : "absolute top-20 bg-white border shadow-lg w-auto p-3 hidden flex right-3"
+                        }
+                    >
+                        <div className="w-full relative">
+                            <IoCaretUpSharp size={25} className="absolute -top-8 right-0" />
+                            {/* <div className="flex flex-col items-start ">
+                <button onClick={() => setLanguage('en')}>English</button>
+                <button onClick={() => setLanguage('es')}>Spanish</button>
+               </div> */}
+
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="flex items-center">
                     <div className="w-6 h-6 mr-7 relative flex justify-center items-center">
                         <Link to="/orders" className=" text-blue-900 m-auto rounded-md">
                             <FaBell className="" size={23}
@@ -141,11 +170,11 @@ const Navbar = () => {
                         </Link>
                     </div>
                     <div className="flex justify-between relative items-center">
-                        
-                           
-                            <button onClick={Profile}>
-                                <FaUserAlt size={23} className="text-blue-900" />
-                            </button>
+
+
+                        <button onClick={Profile}>
+                            <FaUserAlt size={23} className="text-blue-900" />
+                        </button>
                     </div>
                     <div
                         className={
@@ -170,7 +199,7 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <nav
                 className={clsx(

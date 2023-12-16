@@ -1,7 +1,7 @@
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { Box, Tab } from '@mui/material';
 import clsx from 'clsx';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { RiSendPlaneFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { db } from '../../firebase';
@@ -11,7 +11,7 @@ import saveFill from '../../assets/fillSaveIcon.png'
 import { TbMessage } from 'react-icons/tb';
 import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs';
 import {v4 as uuidv4} from 'uuid'
-import Proba from './proba';
+import { LanguageContext } from '../Context/LanguageContext';
 const Genres = () => {
       const [input, setInput] = useState(false);
         const [todoData,setTodoData] = useState([])
@@ -40,11 +40,12 @@ const [value, setValue] = React.useState();
 
 
   
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  
   const activeInput = () => {
     setInput(!input);
   };
+      const { tr, language, setLanguage } = useContext(LanguageContext);
+
   return (
     <div className='mt-20'>
       {
@@ -136,7 +137,7 @@ const [value, setValue] = React.useState();
               </div>    
             <button className='bg-blue-600 h-10 text-white rounded-lg w-1/3 text-lg'>
               <Link to={book.fileUrl} target="_blank">
-                Open
+                {tr('Open')}
               </Link>
             </button>
             

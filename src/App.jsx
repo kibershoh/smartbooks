@@ -6,8 +6,8 @@ import About from './Components/About'
 import Contact from './Components/Contact'
 import Genres from './Components/Home/Genres'
 import Moment from './Components/Home/moment'
-import Proba from './Components/Home/proba'
 import Footer from './Components/Footer'
+import SearchFilter from './Components/SearcgFilter/searchFilter'
 const App = () => {
 
   return (
@@ -20,6 +20,7 @@ const App = () => {
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/genres' element={<Genres/>}/>
+        <Route path='/searchproject' element={<SearchFilter/>}/>
 
       </Routes>
      <Footer/>
