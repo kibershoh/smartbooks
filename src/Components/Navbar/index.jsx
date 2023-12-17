@@ -220,7 +220,7 @@ const Navbar = () => {
                     />
                 </div>
                 <ul className="pl-10 w-100 my-6 mt-8 ">
-                    {navLinks.map((nav) => (
+                    {tr('navLinks').map((nav) => (
                         <li
                             key={nav.id}
                             className={clsx(
