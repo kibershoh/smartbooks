@@ -82,7 +82,9 @@ const BookCards = () => {
                           <h1 className='text-lg text-start  font-bold max-md:text-xs'>{book.bookName}</h1>
                           <p className='text-slate-400 text-start w-full text-sm '>{book.authorName}</p>
                           <p className='break-all pt-1 pr-2 mt-3 overflow-y-scroll h-16 max-md:h-14'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum ratione mollitia neque id nam soluta ex! Autem, inventore nihil.
+                            {
+                              tr('aboutBook')
+                            }
                           </p>
                         </div>
                         <div className='flex flex-col h-44 justify-between '>

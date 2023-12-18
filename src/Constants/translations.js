@@ -18,8 +18,8 @@ export const translations = {
   },
   {
      id: '3',  
-    title: "Genres",
-    path: '/genres',
+    title: "About Me",
+    path: 'https://oybekjonportfolio2.netlify.app/',
     icon: RiMenu2Fill,
   },
   {
@@ -32,7 +32,7 @@ export const translations = {
     Open: "Open",
     All_Books: "All Books",
     me:"and I'm",
-    Frontend:"Frontend Developer",
+    aboutBook:"Thomas decides to use an ultralight aircraft he had been constructing to teach the birds to fly and show them their migratory routes, but quickly realizes the birds will only follow Amy. Aided by his friend Barry, Thomas teaches Amy how to fly an ultralight aircraft of her own ",
     Backend:"Backend Developer",
     Freelancer:"Freelancer",
     aboutMeBtn: "About Me",
@@ -52,8 +52,8 @@ export const translations = {
   },
   {
     id: '3',
-    title: "Janrlar",
-    path: '/genres',
+    title: "Men haqimda",
+    path: 'https://oybekjonportfolio2.netlify.app/',
   },
   {
     id: '4',
@@ -63,6 +63,7 @@ export const translations = {
     ],
     Open: "O'qish",
     All_Books: "Barcha Kitoblar",
+    aboutBook:"Tomas qushlarga uchishni o'rgatish va ularga migratsiya yo'llarini ko'rsatish uchun o'zi yaratgan o'ta yengil samolyotdan foydalanishga qaror qiladi, lekin tezda qushlar faqat Emi ortidan borishini tushunadi. Do'sti Barrining yordami bilan Tomas Emiga o'zining ultra yengil samolyotini qanday boshqarishni o'rgatadi"
     // me:" ",
     // Frontend:"Frontend Dasturchiman",
     // Backend:"Backend Dasturchiman",
