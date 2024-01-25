@@ -10,18 +10,7 @@ export const translations = {
     path: '/',
     icon: AiOutlineDashboard,
   },
-  {
-     id: '2',  
-    title: " My Projects",
-    path: '/about',
-    icon: RiMenu2Fill,
-  },
-  {
-     id: '3',  
-    title: "About Me",
-    path: 'https://oybekjonportfolio2.netlify.app/',
-    icon: RiMenu2Fill,
-  },
+  
   {
      id: '4',  
     title: "Contact",
@@ -45,18 +34,9 @@ export const translations = {
     title: "Kitoblar",
     path: '/',
   },
+  
   {
     id: '2',
-    title: "Loyihalarim",
-    path: '/about',
-  },
-  {
-    id: '3',
-    title: "Men haqimda",
-    path: 'https://oybekjonportfolio2.netlify.app/',
-  },
-  {
-    id: '4',
     title: "Aloqa",
     path: '/contact',
   },
@@ -64,11 +44,6 @@ export const translations = {
     Open: "O'qish",
     All_Books: "Barcha Kitoblar",
     aboutBook:"Tomas qushlarga uchishni o'rgatish va ularga migratsiya yo'llarini ko'rsatish uchun o'zi yaratgan o'ta yengil samolyotdan foydalanishga qaror qiladi, lekin tezda qushlar faqat Emi ortidan borishini tushunadi. Do'sti Barrining yordami bilan Tomas Emiga o'zining ultra yengil samolyotini qanday boshqarishni o'rgatadi"
-    // me:" ",
-    // Frontend:"Frontend Dasturchiman",
-    // Backend:"Backend Dasturchiman",
-    // Freelancer:"Freelancerman",
-    // aboutMeBtn:"Men haqimda",
-    // aboutMe:"Salom."
+     
   }
 };
