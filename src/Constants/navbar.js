@@ -8,18 +8,7 @@ export const navLinks= [
     path: '/',
     icon: AiOutlineDashboard,
   },
-  {
-    id: 2,
-    title: "About",
-    path: '/about',
-    icon: RiMenu2Fill,
-  },
-  {
-    id: 3,
-    title: "Genres",
-    path: '/genres',
-    icon: RiMenu2Fill,
-  },
+   
   {
     id: 4,
     title: "Contact",
